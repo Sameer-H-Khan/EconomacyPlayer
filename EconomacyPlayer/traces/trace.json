@@ -1,0 +1,37 @@
+{
+  "day": 1,
+  "phase": { "name": "investing" },
+  "player": 0,
+  "players": [
+    {
+      "buys": 1,
+      "cards": [
+        {
+          "name": "Sorcerer's Stipend",
+          "uses": 0
+        }
+      ],
+      "coins": 2
+    },
+    {
+      "buys": 1,
+      "cards": [
+        {
+          "name": "Sorcerer's Stipend",
+          "uses": 0
+        }
+      ],
+      "coins": 2
+    }
+  ],
+  "shop": {
+    "Board of Monopoly": 4,
+    "Bubble": 2,
+    "Ghost": 4,
+    "Gold Fish": 2,
+    "Incantation": 6,
+    "Magic Bean Stock": 2,
+    "Senior Worker": 4,
+    "Worker": 4
+  }
+}

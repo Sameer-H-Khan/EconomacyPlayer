@@ -1,0 +1,49 @@
+{
+  "day": 3,
+  "phase": {
+    "attacker": 1,
+    "attacker_card": 1,
+    "name": "attacking"
+  },
+  "player": 0,
+  "players": [
+    {
+      "buys": 1,
+      "cards": [
+        {
+          "name": "Sorcerer's Stipend",
+          "uses": 0
+        },
+        {
+          "name": "Magic Bean Stock",
+          "uses": 0
+        }
+      ],
+      "coins": 1
+    },
+    {
+      "buys": 1,
+      "cards": [
+        {
+          "name": "Sorcerer's Stipend",
+          "uses": 0
+        },
+        {
+          "name": "Worker",
+          "uses": 1
+        }
+      ],
+      "coins": 1
+    }
+  ],
+  "shop": {
+    "Board of Monopoly": 4,
+    "Bubble": 2,
+    "Ghost": 4,
+    "Gold Fish": 2,
+    "Incantation": 6,
+    "Magic Bean Stock": 1,
+    "Senior Worker": 4,
+    "Worker": 3
+  }
+}
