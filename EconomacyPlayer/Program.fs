@@ -51,9 +51,14 @@ let defense = dict [
     ("Worker", 2);
     ("Magic Bean Stock", 1);
     ("Bubble", 2);
-    ("Ghost", 2)
+    ("Ghost", 2);
     ("Senior Worker", 2); 
-    ("Gold Fish", 2)
+    ("Gold Fish", 2);
+    ("Wall of Wealth", 2);
+    ("Apprentice", 1);
+    ("Thug", 4);
+    ("Shield of Greed", 7);
+    ("Golem", 7);
 ]
 
 let offense = dict [ 
@@ -63,9 +68,14 @@ let offense = dict [
     ("Worker", 1);
     ("Magic Bean Stock", 1);
     ("Bubble", 9);
-    ("Ghost", 3)
+    ("Ghost", 3);
     ("Senior Worker", 2); 
-    ("Gold Fish", 1)
+    ("Gold Fish", 1);
+    ("Wall of Wealth", 1);
+    ("Apprentice", 2);
+    ("Thug", 4);
+    ("Shield of Greed", 2);
+    ("Golem", 7);
 ]
 
 let price = dict [ 
@@ -77,6 +87,11 @@ let price = dict [
     ("Ghost", 2)
     ("Senior Worker", 2); 
     ("Gold Fish", 3)
+    ("Wall of Wealth", 1);
+    ("Apprentice", 3);
+    ("Thug", 3);
+    ("Shield of Greed", 4);
+    ("Golem", 5);
 ]
 
 let getDefense (cardName : string) = 
@@ -121,6 +136,8 @@ let buyDecision (state : State) =
         if state.day = 1 then
             if canPurchase state "Incantation" then
                 Card("Incantation")
+            else if canPurchase state "Thug" then
+                Card("Thug")
             else if canPurchase state "Senior Worker" then
                 Card("Senior Worker")
             else if canPurchase state "Worker" then
@@ -132,6 +149,8 @@ let buyDecision (state : State) =
         else if state.day = 2 then
             if canPurchase state "Gold Fish" then
                 Card("Gold Fish")
+            else if canPurchase state "Apprentice" then
+                Card("Apprentice")
             else if canPurchase state "Ghost" then
                 Card("Ghost")
             else if canPurchase state "Bubble" then
@@ -143,7 +162,11 @@ let buyDecision (state : State) =
 
         // Day 3
         else
-            if canPurchase state "Incantation" then
+            if canPurchase state "Golem" then
+                Card("Golem")
+            else if canPurchase state "Shield of Greed" then
+                Card("Shield of Greed")
+            else if canPurchase state "Incantation" then
                 Card("Incantation")
             else if canPurchase state "Board of Monopoly" then
                 Card("Board of Monopoly")
@@ -151,6 +174,8 @@ let buyDecision (state : State) =
                 Card("Ghost")
             else if canPurchase state "Bubble" then
                 Card("Bubble")
+            else if canPurchase state "Wall of Wealth" then
+                Card("Wall of Wealth")
             else if canPurchase state "Magic Bean Stock" then
                 Card("Magic Bean Stock")
             else
